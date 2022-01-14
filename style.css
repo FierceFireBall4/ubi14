@@ -4,6 +4,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+.disable-select{
+  zoom:none;
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -13,6 +16,7 @@ nav {
   flex: 1;
   text-align: right;
   font-family: 'Oswald', sans-serif;
+  font-weight: bold;
 }
 nav ul {
   display: inline-block;
@@ -67,14 +71,16 @@ p {
   margin: 30px 0;
   border-radius: 30px;
   transition: background 0.5s;
+  transition: transform 0.2s;
 }
 .btn:hover {
-  background: #563434;
+  background: black;
+  transform: scale(1.25);
 }
 .header {
   background: radial-gradient(#fff,#ffd6d6);
 }
-<!--fff-ffd6d6=0riginal-->
+<!--fff-ffd6d6-0riginal-->
 <!--ffff00-ffa500=Me-->
 <!--ffa500-ffff00=Mommy-->
 <!--0000ff-000080=Alsome-->
@@ -82,12 +88,15 @@ p {
   margin-top: 70px
 }
 .categories {
-    margin: 70px 0;
-}
+  margin-left: 70px 0;
+  }
 .col-3 {
     flex-basis: 28.25%;
-    min-width: 250px;
+    min-width: 100px;
     margin-bottom: 30px;
+}
+col-3 img {
+  width: 100%;
 }
 .col-2 img {
   width: 100%;
@@ -95,7 +104,7 @@ p {
 .small-container {
   max-width: 1080px;
   margin: auto;
-  padding-left: 25px;a
+  padding-left: 25px;
   padding-right: 25px;
 }
 .a {
@@ -113,6 +122,7 @@ p {
   padding:10px;
   min-width: 200px;
   margin-bottom: 50px;
+  transition: transform 0.5s;
 }
 .col-4 img{
   width: 100%;
@@ -133,9 +143,61 @@ em {
 }
 .title {
   text-align: center;
-  margin-left: 45px;
-  position: realtive;
-  line-height: 60px;
+  position: relative;
   color: #555;
   font-family: 'Oswald', sans-serif;
+}
+.title:after {
+content:'';
+background: #ff523b;
+width: 80px;
+height: 5px;
+border-radius: 5px;
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+}
+h4 {
+  color: #555;
+}
+.col-4 p{
+font-size:14px;
+}
+.rating {
+  color: orange;
+}
+.col-4:hover {
+transform: translateY(-5px);
+}
+ /*--offer--*/
+.offer {
+  background: radial-gradient(#fff,#ffd6d6);
+  margin-top: 80px;
+  padding: 30px 0;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+.col-2 .offer-img{
+  padding: 50px;
+}
+small {
+  color: #555;
+}
+
+/*-----testimonial-----*/
+
+.testimonial .col-3 img{
+  width: 50px;
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+.testimonial {
+  padding-top: 100px;
+}
+
+.testimonial .col-3{
+  text-align: center;
+  padding: 40px 20px;
 }
